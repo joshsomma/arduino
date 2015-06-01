@@ -4,7 +4,7 @@ unsigned long previousTime = 0;
 int switchState = 0;
 int prevSwitchState = 0; 
 int led = 2; //first led output pin
-long interval = 10000; //interval of the light switch
+long interval = 5000; //interval of the light switch
 
 void setup() {
   //  set up output pins and input for the switch
@@ -22,7 +22,6 @@ void loop() {
     led++; //increment to the next light
 }
     if (led > 7) {
-    for (y = 0; y < 5; y++) {
 		for (int x = 2; x < 8; x++) {
 			digitalWrite(x,HIGH);
 			delay(100);
@@ -32,8 +31,8 @@ void loop() {
 			digitalWrite(x,HIGH);
 			delay(100);
 			digitalWrite(x,LOW);
-		}
-    }  	
+    } 
+    
   }
   switchState = digitalRead(switchPin);
   if (switchState != prevSwitchState) {
