@@ -23,7 +23,7 @@ void setup() {
   //pins 2 & 3 talk to the H-Bridge and tells it which way to spin the motor
   pinMode(controlPin1, OUTPUT);
   pinMode(controlPin2, OUTPUT);
-  //pin 9 enables the H-Bridge
+  //pin 9 enables power to the H-Bridge
   pinMode(enablePin, OUTPUT);
   //turns off the H-Bridge at start of program
   digitalWrite(enablePin, LOW);
